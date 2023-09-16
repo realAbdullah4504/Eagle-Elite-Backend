@@ -26,6 +26,10 @@ app.use('/category', categoryRouter); //if anyone go to route '/' it will redire
 
 const port = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+    res.send("Api is running!");
+})
+
 app.listen(port, () => {
     console.log("Express server listening on port " + port);
 });
